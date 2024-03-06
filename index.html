@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imgs/favicon.ico" />
+    <title>Daniels</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--body font link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- header font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!-- bootstrap link  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- css link -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- media link -->
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+
+  <body>
+    <div class="w-75 mx-auto bg-info rounded p-3">
+      <h1 class="text-center">Crud System</h1>
+
+      <div>
+        <label for="productNameInput">Product Name</label>
+        <input type="text" id="productNameInput" class="form-control" />
+      </div>
+
+      <div>
+        <label for="productPriceInput">Product Price</label>
+        <input type="number" id="productPriceInput" class="form-control" />
+      </div>
+
+      <div>
+        <label for="productCategoryInput">Product category</label>
+        <input type="text" id="productCategoryInput" class="form-control" />
+      </div>
+
+      <div>
+        <label for="productDescriptionInput">Product Description</label>
+        <textarea id="productDescriptionInput" class="form-control"> </textarea>
+      </div>
+
+      <button class="btn btn-primary mt-3 w-100" onclick="addProduct() " id="addBtn">
+        Add Product
+      </button>
+
+      <button class="btn btn-primary mt-3 w-100 d-none" onclick="updateProduct() " id="updateBtn">
+        Update Product
+      </button>
+
+
+      <input oninput="search()" type="search" class="form-control my-3 w-75 mx-auto" placeholder="Search by name " id="searchInput">
+
+      <table class="table my-3 text-center">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action </th>
+
+          </tr>
+        </thead>
+
+        <tbody id="tableBody">
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script src="jv/bootstrap.bundle.min.js"></script>
+    <script src="jv/index.js"></script>
+  </body>
+</html>
